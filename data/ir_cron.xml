@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Process pending WhatsApp events every minute -->
+        <record id="cron_whatsapp_pending_events" model="ir.cron">
+            <field name="name">GS WhatsApp: Process Pending Events</field>
+            <field name="model_id" ref="gs_whatsapp_loyalty.model_gs_whatsapp_event"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_process_pending_events()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Points expiry alert every day -->
+        <record id="cron_points_expiry_alert" model="ir.cron">
+            <field name="name">GS WhatsApp: Points Expiry Alert</field>
+            <field name="model_id" ref="loyalty.model_loyalty_card"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_gs_points_expiry_alert()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

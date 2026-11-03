@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_gs_whatsapp_event_test_form" model="ir.ui.view">
+        <field name="name">gs.whatsapp.event.test.form</field>
+        <field name="model">gs.whatsapp.event.test</field>
+        <field name="arch" type="xml">
+            <form string="Test WhatsApp Loyalty Events">
+                <div class="alert alert-warning" role="alert">
+                    These buttons send real requests to the configured webhook.
+                    Use a safe test customer and test endpoint.
+                </div>
+                <group>
+                    <field name="partner_id"
+                           context="{'default_customer_rank': 1}"
+                           options="{'no_create_edit': True}"/>
+                </group>
+
+                <separator string="OTP Events"/>
+                <group>
+                    <group>
+                        <field name="otp_code"/>
+                        <field name="expires_in_minutes"/>
+                        <field name="points_to_redeem"/>
+                    </group>
+                    <group>
+                        <button name="action_test_otp_registration"
+                                type="object"
+                                string="Test Registration OTP"
+                                class="btn-secondary"/>
+                        <button name="action_test_otp_redeem"
+                                type="object"
+                                string="Test Redeem OTP"
+                                class="btn-secondary"/>
+                    </group>
+                </group>
+
+                <separator string="Welcome and Purchase"/>
+                <group>
+                    <group>
+                        <field name="welcome_points"/>
+                        <field name="points_balance"/>
+                        <field name="invoice_number"/>
+                        <field name="invoice_date"/>
+                        <field name="invoice_url" placeholder="Filled from the customer's latest posted invoice"/>
+                        <field name="amount_total"/>
+                        <field name="currency_id"/>
+                    </group>
+                    <group>
+                        <button name="action_test_welcome"
+                                type="object"
+                                string="Test Welcome"
+                                class="btn-secondary"/>
+                        <button name="action_test_post_purchase"
+                                type="object"
+                                string="Test Post Purchase"
+                                class="btn-secondary"/>
+                    </group>
+                </group>
+
+                <separator string="Redemption and Expiry"/>
+                <group>
+                    <group>
+                        <field name="points_redeemed"/>
+                        <field name="description"/>
+                        <field name="expiring_points"/>
+                        <field name="expiry_date"/>
+                        <field name="days_remaining"/>
+                    </group>
+                    <group>
+                        <button name="action_test_redeem_success"
+                                type="object"
+                                string="Test Redeem Success"
+                                class="btn-secondary"/>
+                        <button name="action_test_points_expiry"
+                                type="object"
+                                string="Test Points Expiry"
+                                class="btn-secondary"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_test_all"
+                            type="object"
+                            string="Test All Events"
+                            class="btn-primary"
+                            confirm="This sends six real webhook requests. Continue?"/>
+                    <button string="Close" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_gs_whatsapp_event_test" model="ir.actions.act_window">
+        <field name="name">Test WhatsApp Events</field>
+        <field name="res_model">gs.whatsapp.event.test</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="group_ids" eval="[(4, ref('base.group_system'))]"/>
+    </record>
+</odoo>

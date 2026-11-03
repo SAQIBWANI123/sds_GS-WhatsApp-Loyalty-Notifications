@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title description">
+  <title id="title">GS WhatsApp Loyalty Notifications</title>
+  <desc id="description">Connect Odoo loyalty events with customer WhatsApp notifications.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10233f"/>
+      <stop offset="1" stop-color="#174b68"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#20c997"/>
+      <stop offset="1" stop-color="#61dfb1"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#07182a" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="400" rx="0" fill="url(#background)"/>
+  <circle cx="1090" cy="68" r="205" fill="#ffffff" opacity=".035"/>
+  <circle cx="1130" cy="360" r="155" fill="#20c997" opacity=".08"/>
+  <path d="M0 335C170 286 248 414 430 361s291-84 431-22 237 42 339-2v63H0z" fill="#ffffff" opacity=".035"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="72" y="58" width="190" height="34" rx="17" fill="#ffffff" opacity=".12"/>
+    <circle cx="91" cy="75" r="5" fill="#61dfb1"/>
+    <text x="106" y="81" fill="#e8fff7" font-size="14" font-weight="700" letter-spacing="1.2">SMARTDESKSOLUTIONS</text>
+
+    <text x="72" y="164" fill="#ffffff" font-size="43" font-weight="700">GS WhatsApp Loyalty</text>
+    <text x="72" y="216" fill="#ffffff" font-size="43" font-weight="700">Notifications</text>
+    <rect x="74" y="244" width="56" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="72" y="284" fill="#d6e5f1" font-size="19">Keep customers informed at every loyalty milestone.</text>
+    <text x="72" y="316" fill="#d6e5f1" font-size="16">OTP verification  ·  Purchases  ·  Rewards  ·  Expiry alerts</text>
+    <text x="72" y="372" fill="#ffffff" font-size="14" font-weight="700">www.smartdesksolutions.com</text>
+    <circle cx="269" cy="367" r="2.5" fill="#61dfb1"/>
+    <text x="284" y="372" fill="#ffffff" font-size="14" font-weight="700">info@smartdesksolutions.com</text>
+
+    <g filter="url(#shadow)">
+      <rect x="777" y="55" width="338" height="292" rx="28" fill="#ffffff"/>
+      <rect x="795" y="73" width="302" height="48" rx="15" fill="#f3f8fa"/>
+      <circle cx="820" cy="97" r="13" fill="#20c997"/>
+      <path d="M814 97h12m-6-6v12" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="844" y="102" fill="#17344b" font-size="15" font-weight="700">Loyalty updates</text>
+      <text x="1071" y="101" fill="#94a7b5" font-size="20">···</text>
+
+      <rect x="815" y="142" width="258" height="70" rx="17" fill="#eaf8f1"/>
+      <text x="834" y="169" fill="#31546a" font-size="14">Welcome, Aisha!</text>
+      <text x="834" y="193" fill="#173f36" font-size="15" font-weight="700">You earned 100 points.</text>
+      <text x="1045" y="231" fill="#94a7b5" font-size="11">10:42</text>
+
+      <rect x="847" y="246" width="226" height="70" rx="17" fill="#f2f6fa"/>
+      <text x="866" y="273" fill="#31546a" font-size="14">Your points balance</text>
+      <text x="866" y="298" fill="#17344b" font-size="18" font-weight="700">1,250 points</text>
+      <circle cx="1051" cy="281" r="11" fill="#20c997"/>
+      <path d="M1046 281l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g fill="#61dfb1">
+      <circle cx="726" cy="108" r="4"/>
+      <circle cx="740" cy="108" r="4" opacity=".65"/>
+      <circle cx="754" cy="108" r="4" opacity=".35"/>
+    </g>
+  </g>
+</svg>

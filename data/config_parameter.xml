@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="param_webhook_url_otp_registration" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.webhook_url_otp_registration</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_webhook_url_welcome" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.webhook_url_welcome</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_webhook_url_post_purchase" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.webhook_url_post_purchase</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_webhook_url_otp_redeem" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.webhook_url_otp_redeem</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_webhook_url_redeem_success" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.webhook_url_redeem_success</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_webhook_url_points_expiry" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.webhook_url_points_expiry</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_expiry_alert_days" model="ir.config_parameter">
+            <field name="key">gs_whatsapp_loyalty.expiry_alert_days</field>
+            <field name="value">7</field>
+        </record>
+    </data>
+</odoo>

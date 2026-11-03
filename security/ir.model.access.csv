@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gs_whatsapp_event_system,gs.whatsapp.event.system,model_gs_whatsapp_event,base.group_system,1,1,1,1
+access_gs_whatsapp_event_test_system,gs.whatsapp.event.test.system,model_gs_whatsapp_event_test,base.group_system,1,1,1,1
+access_gs_whatsapp_otp_wizard_user,gs.whatsapp.otp.wizard.user,model_gs_whatsapp_otp_wizard,base.group_user,1,1,1,1
+access_gs_whatsapp_pending_otp_system,gs.whatsapp.pending.otp.system,model_gs_whatsapp_pending_otp,base.group_system,1,1,1,1

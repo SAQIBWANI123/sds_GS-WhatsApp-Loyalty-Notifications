@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Keep standard Odoo Phone / Mobile widgets. Country-split fields stay
+         available for OTP/portal code but are not shown on the form. -->
+    <record id="view_partner_form_gs_whatsapp_otp_required" model="ir.ui.view">
+        <field name="name">res.partner.form.gs.whatsapp.loyalty</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="40"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="before">
+                <field name="phone_country_id" invisible="1"/>
+                <field name="phone_local_number" invisible="1"/>
+                <field name="mobile_country_id" invisible="1"/>
+                <field name="mobile_local_number" invisible="1"/>
+                <!-- Not shown anywhere; loaded so partner_otp_form.js can read
+                     it to skip the customer-OTP wizard when editing an
+                     existing vendor. It's never set on brand-new records
+                     (Odoo only increments it once a PO/bill is confirmed),
+                     so the JS also checks the vendor-action context. -->
+                <field name="supplier_rank" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

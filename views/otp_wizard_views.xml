@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_gs_whatsapp_otp_wizard_form" model="ir.ui.view">
+        <field name="name">gs.whatsapp.otp.wizard.form</field>
+        <field name="model">gs.whatsapp.otp.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Confirm WhatsApp OTP">
+                <group>
+                    <field name="purpose" invisible="1"/>
+                    <field name="partner_id" invisible="1"/>
+                    <field name="pending_otp_id" invisible="1"/>
+                    <field name="partner_vals_json" invisible="1"/>
+                    <field name="name" invisible="purpose != 'registration'" readonly="purpose == 'registration'"/>
+                    <field name="mobile" readonly="1"/>
+                    <field name="country_id" invisible="purpose != 'registration'" readonly="1"/>
+                    <field name="otp_code" placeholder="Enter 6-digit OTP"/>
+                    <field name="welcome_points" invisible="purpose != 'registration'"/>
+                    <field name="points_to_redeem" invisible="purpose != 'redeem'"/>
+                </group>
+                <footer>
+                    <button name="action_confirm_otp"
+                            type="object"
+                            string="Confirm OTP &amp; Create Contact"
+                            class="btn-primary"
+                            invisible="purpose != 'registration'"/>
+                    <button name="action_confirm_otp"
+                            type="object"
+                            string="Confirm OTP"
+                            class="btn-primary"
+                            invisible="purpose != 'redeem'"/>
+                    <button name="action_resend_otp"
+                            type="object"
+                            string="Resend OTP"
+                            class="btn-secondary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_config_settings_gs_whatsapp_loyalty" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.gs.whatsapp.loyalty</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <div class="app_settings_block"
+                     data-string="WhatsApp Loyalty"
+                     string="WhatsApp Loyalty"
+                     data-key="gs_whatsapp_loyalty"
+                     groups="base.group_system">
+                    <h2>WhatsApp Loyalty</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Event Webhooks</span>
+                                <div class="text-muted">
+                                    One BusinessChat webhook URL per loyalty event.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_webhook_url_otp_registration"/>
+                                <div class="content-group mt8">
+                                    <field name="gs_whatsapp_webhook_url_otp_registration"
+                                           class="w-100"
+                                           placeholder="https://.../otp_registration"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_webhook_url_welcome"/>
+                                <div class="content-group mt8">
+                                    <field name="gs_whatsapp_webhook_url_welcome"
+                                           class="w-100"
+                                           placeholder="https://.../welcome"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_webhook_url_post_purchase"/>
+                                <div class="content-group mt8">
+                                    <field name="gs_whatsapp_webhook_url_post_purchase"
+                                           class="w-100"
+                                           placeholder="https://.../post_purchase"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_webhook_url_otp_redeem"/>
+                                <div class="content-group mt8">
+                                    <field name="gs_whatsapp_webhook_url_otp_redeem"
+                                           class="w-100"
+                                           placeholder="https://.../otp_redeem"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_webhook_url_redeem_success"/>
+                                <div class="content-group mt8">
+                                    <field name="gs_whatsapp_webhook_url_redeem_success"
+                                           class="w-100"
+                                           placeholder="https://.../redeem_success"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_webhook_url_points_expiry"/>
+                                <div class="content-group mt8">
+                                    <field name="gs_whatsapp_webhook_url_points_expiry"
+                                           class="w-100"
+                                           placeholder="https://.../points_expiry"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_expiry_alert_days"/>
+                                <div class="text-muted">
+                                    Notify customers this many days before points expire.
+                                </div>
+                                <div class="content-group mt16">
+                                    <field name="gs_whatsapp_expiry_alert_days"
+                                           class="oe_inline"/>
+                                    <span class="ms-2">days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="gs_whatsapp_default_starting_points"/>
+                                <div class="text-muted">
+                                    Points granted once after a new customer confirms the registration OTP.
+                                </div>
+                                <div class="content-group mt16">
+                                    <field name="gs_whatsapp_default_starting_points"
+                                           class="oe_inline"/>
+                                    <span class="ms-2">points</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Webhook Tools</span>
+                                <div class="text-muted">
+                                    Save settings before testing. Each test uses that event's webhook URL.
+                                </div>
+                                <div class="content-group mt16">
+                                    <button name="%(action_gs_whatsapp_event_test)d"
+                                            type="action"
+                                            string="Test Events"
+                                            class="btn-primary"/>
+                                    <button name="%(action_gs_whatsapp_event)d"
+                                            type="action"
+                                            string="View Event Logs"
+                                            class="btn-secondary ms-2"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
